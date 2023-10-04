@@ -1,3 +1,4 @@
+# catalog-info.yaml
 templates:
   - apiVersion: backstage.io/v1alpha1
     kind: Template
