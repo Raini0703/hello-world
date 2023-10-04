@@ -1,9 +1,11 @@
-# catalog-info.yaml
-templates:
-  - apiVersion: backstage.io/v1alpha1
-    kind: Template
-    metadata:
-      name: python-docker
-    spec:
-      type: service
-      owner: raini.singh06@gmail.com
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo
+  description: Hello, World! Example Component
+  annotations:
+    github.com/project-slug: Raini0703/hello-world
+spec:
+  type: website
+  owner: Raini0703
+  lifecycle: experimental
