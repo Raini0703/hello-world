@@ -14,3 +14,24 @@ spec:
       environment: production
       host: localhost
       port: 3000
+
+  containers:
+    - name: main
+      image: docker.io/library/python:3.8-slim
+      command: ["python", "HelloWorld.py"]
+      workDir: /app
+      ports:
+        - port: 8000
+      environment:
+        - key: PYTHONUNBUFFERED
+          value: "1"
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      volumeMounts:
+        - name: code
+          mountPath: /app
