@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: python-docker
+  description: Python Dockerized Application
+  annotations:
+    github.com/project-slug: Raini0703/hello-world
+spec:
+  type: service
+  owner: YourGitHubUsername
+  lifecycle: experimental
+  providesApis:
+    - kind: Website
+      environment: production
+      host: localhost
+      port: 3000
