@@ -7,7 +7,7 @@ metadata:
     github.com/project-slug: Raini0703/hello-world
 spec:
   type: service
-  owner: YourGitHubUsername
+  owner: raini0703
   lifecycle: experimental
   providesApis:
     - kind: Website
