@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo
+  name: python-docker
   description: Hello, World! Example Component
   annotations:
     github.com/project-slug: Raini0703/hello-world
