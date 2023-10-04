@@ -1,0 +1,28 @@
+name: Deploy to Local Backstage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker
+        run: |
+          docker pull rainisingh/hello-world-app:1.0.0
+          docker tag rainisingh/hello-world-app:1.0.0 localhost:3000/rainisingh/hello-world-app:1.0.0
+
+      - name: Push Docker image to Local Backstage
+        run: |
+          docker push localhost:3000/rainisingh/hello-world-app:1.0.0
+
+      - name: Update Backstage Deployment
+        run: |
+          curl -X POST http://localhost:3000/api/catalog/entities/rainisingh/hello-world-app/default/update \
+            -H "Content-Type: application/json" \
+            -d '{"spec": {"containers": [{"image": "localhost:3000/rainisingh/hello-world-app:1.0.0"}]}'
