@@ -1,0 +1,8 @@
+templates:
+  - apiVersion: backstage.io/v1alpha1
+    kind: Template
+    metadata:
+      name: python-docker
+    spec:
+      type: service
+      owner: raini.singh06@gmail.com
