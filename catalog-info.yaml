@@ -2,10 +2,15 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: hello-world-app
-  description: hello-world pyhton app
-  annotations:
-    github.com/project-slug: Raini0703/hello-world
+  description: Hello World Application
 spec:
   type: service
-  owner: Raini0703/hello-world
-  lifecycle: experimental
+  lifecycle: production
+  owner: rainisingh
+  containers:
+    - image: rainisingh/hello-world-app:1.0.0
+  providesApis:
+    - kind: Website
+      environment: production
+      host: localhost
+      port: 5000  # Adjust the port according to your application's configuration
