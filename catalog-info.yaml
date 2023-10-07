@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hello-world-app
+  description: hello-world pyhton app
+  labels:
+    backstage.io/language: python
+spec:
+  type: service
+  owner: Raini0703/hello-world
+  lifecycle: experimental
+  providesApis:
+    - kind: Website
+      environment: production
+      host: localhost
+      port: 5000
