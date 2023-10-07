@@ -9,7 +9,3 @@ spec:
   type: service
   owner: Raini0703/hello-world
   lifecycle: experimental
-  providesApis:
-    - kind: Website
-      host: localhost
-      port: 5000
