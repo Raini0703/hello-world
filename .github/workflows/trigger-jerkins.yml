@@ -7,9 +7,9 @@ on:
 
 jobs:
   trigger-jenkins-job:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: Trigger Jenkins Job
         run: |
-          curl "http://localhost:8080/buildByToken/build?job=demo-4th&token=raini1"
+          curl "http://google.com"
